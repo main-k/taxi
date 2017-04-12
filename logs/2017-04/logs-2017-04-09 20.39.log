@@ -1,0 +1,7 @@
+[DEBUG] 2017-04-09 20:33:01.510 [Thread-5] TaxiCompany - Initializing company...
+[INFO ] 2017-04-09 20:33:02.494 [Thread-1] Client - Client #11 : 1 taxi released
+[INFO ] 2017-04-09 20:33:02.626 [Thread-5] Client - Client #15 : 3 taxi released
+[INFO ] 2017-04-09 20:33:02.691 [Thread-4] Client - Client #14 : 2 taxi released
+[INFO ] 2017-04-09 20:33:02.893 [Thread-6] Client - Client #16 : 4 taxi released
+[INFO ] 2017-04-09 20:33:03.107 [Thread-2] Client - Client #12 : 1 taxi released
+[INFO ] 2017-04-09 20:33:03.112 [Thread-3] Client - Client #13 : 3 taxi released
