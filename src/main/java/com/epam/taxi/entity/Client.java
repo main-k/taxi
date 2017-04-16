@@ -14,6 +14,7 @@ public class Client extends Thread {
     private static final Logger LOGGER = LogManager.getLogger(Client.class);
     private District iAmHere;
     private District iWantThere;
+    private final int TIME_COEFFICIENT = 100;
 
     public Client(District iAmHere, District iWantThere) {
         this.iAmHere = iAmHere;
@@ -42,11 +43,10 @@ public class Client extends Thread {
         try {
             taxi = TaxiCompany.getInstance().orderTaxi(iAmHere);
             System.out.println("Taxi Client #" + this.getId() + " took taxi #" + taxi.getId());
-            int usingTime = abs(this.iAmHere.getId() - taxi.getCurrentLocation().getId()) +
-                    abs(this.iAmHere.getId() - this.iWantThere.getId());
-            TimeUnit.MILLISECONDS.sleep(usingTime * 100);
+            int usingTime = countTravelTime(taxi);
+            TimeUnit.MILLISECONDS.sleep(usingTime);
         } catch (InterruptedException e) {
-            LOGGER.log(Level.ERROR, "Taxi Client #" + this.getId() + " lost ->"
+            LOGGER.log(Level.ERROR, "Taxi Client #" + this.getId() + " died: "
                     + e.getMessage());
         } finally {
             if (taxi != null) {
@@ -54,6 +54,13 @@ public class Client extends Thread {
                 taxi.setCurrentLocation(iWantThere);
                 TaxiCompany.getInstance().returnTaxi(taxi);
             }
+            else{
+                LOGGER.log(Level.WARN, "Client #" + this.getId() + " lost taxi : " + taxi.getId());
+            }
         }
+    }
+    private int countTravelTime(Taxi taxi){
+        return (District.getDistance(this.iAmHere, taxi.getCurrentLocation()) +
+                District.getDistance(this.iAmHere, this.iWantThere)) * TIME_COEFFICIENT;
     }
 }

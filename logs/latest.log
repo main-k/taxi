@@ -1,6 +1,6 @@
-[INFO ] 2017-04-10 11:14:11.052 [Thread-1] Client - Client #11 : 1 taxi released
-[INFO ] 2017-04-10 11:14:11.045 [Thread-3] Client - Client #13 : 4 taxi released
-[INFO ] 2017-04-10 11:14:11.403 [Thread-6] Client - Client #16 : 3 taxi released
-[INFO ] 2017-04-10 11:14:11.403 [Thread-2] Client - Client #12 : 2 taxi released
-[INFO ] 2017-04-10 11:14:11.563 [Thread-5] Client - Client #15 : 1 taxi released
-[INFO ] 2017-04-10 11:14:11.564 [Thread-4] Client - Client #14 : 4 taxi released
+[INFO ] 2017-04-16 22:26:41.588 [Thread-3] Client - Client #13 : 3 taxi released
+[INFO ] 2017-04-16 22:26:41.588 [Thread-6] Client - Client #16 : 2 taxi released
+[INFO ] 2017-04-16 22:26:41.588 [Thread-1] Client - Client #11 : 1 taxi released
+[INFO ] 2017-04-16 22:26:41.588 [Thread-4] Client - Client #14 : 4 taxi released
+[INFO ] 2017-04-16 22:26:41.895 [Thread-5] Client - Client #15 : 3 taxi released
+[INFO ] 2017-04-16 22:26:42.195 [Thread-2] Client - Client #12 : 2 taxi released

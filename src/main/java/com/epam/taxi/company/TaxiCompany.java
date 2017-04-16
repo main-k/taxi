@@ -55,7 +55,8 @@ public class TaxiCompany {
     public String toString() {
         StringBuilder str = new StringBuilder();
         for (Taxi taxi : taxis) {
-            str.append(taxi + "\n");
+            str.append(taxi);
+            str.append("\n");
         }
         return str.toString();
     }
@@ -88,7 +89,7 @@ public class TaxiCompany {
 
     private int chooseTaxi(District whereIsClient) {
         int taxiIndex = 0;
-        int distance = 0;
+        int distance;
         int minDistance = 10;
         for (Taxi taxi : taxis) {
             if ((distance = District.getDistance(taxi.getCurrentLocation(), whereIsClient)) < minDistance) {
